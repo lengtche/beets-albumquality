@@ -15,7 +15,7 @@ def _tmpl_album_quality(album):
     if not len(items):
         return
     
-    first_track_path = items[0].path
+    first_track_path = items[0].path.decode('utf-8')
     mp3 = dnuos.MP3(first_track_path)
 
     try:
